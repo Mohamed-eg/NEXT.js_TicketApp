@@ -77,8 +77,7 @@ const EditTicketForm = ({ ticket }) => {
       <form
         onSubmit={handleSubmit}
         method="post"
-        className="flex flex-col gap-3 w-1/2"
-      >
+        className="flex flex-col gap-3 bg-slate-900 m-10 w-1/2">
         <h3>{EDITMODE ? "Update Your Ticket" : "Create New Ticket"}</h3>
         <label>Title</label>
         <input
@@ -102,8 +101,7 @@ const EditTicketForm = ({ ticket }) => {
         <select
           name="category"
           value={formData.category}
-          onChange={handleChange}
-        >
+          onChange={handleChange}>
           {categories?.map((category, _index) => (
             <option key={_index} value={category}>
               {category}
